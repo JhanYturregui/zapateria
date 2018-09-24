@@ -1,0 +1,107 @@
+.all-content{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.menu-lat{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    float: left;
+    border-right: 1px solid #BDBDBD;
+}
+.menu-lat .lat-header{
+    width: 100%;
+    height: 30vh;
+    background: #0277bd;
+    text-align: center;
+    padding-top: 4vh;
+}
+.menu-lat .lat-header img{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    margin-bottom: 2vh;
+}
+.menu-lat .lat-header h5{
+    color: #FFF;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.menu-lat .lat-header p{
+    color: #FFF;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.menu-lat .lat-body{
+    padding: 5vh 2vw;
+    text-align: center;
+}
+.menu-lat .lat-body .tabs{
+    width: 100%;
+    text-align: left;
+    padding: 10px 1vw;
+    border-bottom: 1px solid #CCC;
+    font-weight: bold;
+}
+.menu-lat .lat-body .tabs a{
+    color: #546e7a;
+    font-family: 'Raleway', sans-serif;
+}
+.menu-lat .lat-body .tabs a:hover{
+    text-decoration: none;
+    color: #0277bd;
+}
+.menu-lat .lat-body .tabs a i{
+    padding-right: 5px;
+}
+.menu-lat .lat-body .tabs a .fa-sort-down, .fa-sort-up{
+    float: right;
+    padding-right: 0 !important;
+}
+.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuUserTypes{
+    list-style: none;
+    display: none;
+    text-align: left;
+}
+.menu-lat .lat-body ul li{
+    margin-left: 1.5vw;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCC;   
+}
+.menu-lat .lat-body ul li a{
+    color: #546e7a;
+}
+.menu-lat .lat-body ul li a:hover{
+    text-decoration: none;
+    color: #0277bd;
+}
+.menu-lat .lat-body ul li a i{
+    padding-right: 5px;
+}
+.main-content {
+    width: 75vw;
+    height: 100vh;
+    float: right;
+    position: relative;
+}
+.main-content .navbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 700;
+    width: 75vw;
+    height: 10vh;
+    background: #0277bd;
+}
+.main-content .menu-content{
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+    padding: 3vh 3vw;
+}
+
+#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideProviders{
+    display: none;
+}

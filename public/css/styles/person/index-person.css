@@ -1,0 +1,15 @@
+.people{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 3vh;
+}
+thead{
+    color: #607d8b;
+}
+.fa-pen{
+    color: #43a047;
+}
+.fa-trash{
+    color: #e53935;
+}

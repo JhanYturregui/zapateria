@@ -18,17 +18,30 @@
     height: 30vh;
     background: #0277bd;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 5vh;
 }
-.menu-lat .lat-header img{
-    width: 10vh;
-    height: 10vh;
+.menu-lat .lat-header .capitalLetter{
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
+    margin-left: 10vw;
+    background: #FFF;
 }
-.menu-lat .lat-header h5{
+.menu-lat .lat-header .capitalLetter p{
+    text-align: center;
+    color: #0277bd;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 6vh;
+    margin: 0 !important;
+    padding-top: 1vh;
+}
+.menu-lat .lat-header p{
     color: #FFF;
-    text-shadow: 1px 1px 1px #ccc;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5vh;
+    font-weight: bold;
 }
 .menu-lat .lat-header p{
     color: #FFF;

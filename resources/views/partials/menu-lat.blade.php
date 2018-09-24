@@ -1,8 +1,9 @@
 <!-- Header Lat -->
 <div class="lat-header">
-    <img src="{{ asset('images/icon.png') }}" alt="">
-    <h5>Zapatería</h5>
-    <p>{{ Auth::user()->name }}</p>
+    <div class="capitalLetter">
+        <p id="capitalLetter"></p>
+    </div>
+    <p id="txtMessageName">Hola!</p>
 </div>
 
 <!-- Body lat -->

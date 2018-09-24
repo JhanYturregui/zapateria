@@ -20,9 +20,10 @@
     <!-- JS -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+    
 </head>
 <body>
-    
+    <input type="hidden" id="txtDoc" value="{{ Auth::user()->doc_num }}">
     <div class="all-content">
         <!-- MENÚ LATERAL -->
         <div class="menu-lat">
@@ -45,6 +46,7 @@
         </div>
     </div>
 
+    <script src="{{ asset('js/menu/app.js') }}"></script>
     <script src="{{ asset('js/menu/menu.js') }}"></script>
     @yield('js')
 

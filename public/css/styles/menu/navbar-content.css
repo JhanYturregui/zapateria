@@ -3,17 +3,30 @@
 	height: 10vh;
 	margin-left: 5%;
 }
-.navbar-content ul{
+.navbar-content .app-name{
+	width: 30%;
+	float: left;
+}
+.navbar-content .app-name h4{
+	color: #FFF;
+	margin: 0 !important;
+	margin-top: 2vh !important;
+}
+.navbar-content .nav-buttons{
+	width: 70%;
+	float: left;
+}
+.navbar-content .nav-buttons ul{
 	list-style: none;
 	float: right;
-	padding-top: 3vh;
+	padding-top: 2vh;
 }
-.navbar-content ul li{
+.navbar-content .nav-buttons ul li{
 	display: inline;
 	padding-right: 2vw;
 	font-size: 1.4em;
 }
-.navbar-content ul li i{
+.navbar-content .nav-buttons ul li i{
 	color: #FFF;
 	text-shadow: 1px 1px 1px #ccc;
 }

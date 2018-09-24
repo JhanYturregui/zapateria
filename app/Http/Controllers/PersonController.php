@@ -109,9 +109,10 @@ class PersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($dni)
     {
-        //
+        $person = Person::where([['state', true],['document_number', $dni]])->first()->toJson();
+        print_r($person);
     }
 
     /**

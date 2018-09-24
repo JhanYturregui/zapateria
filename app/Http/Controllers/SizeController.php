@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\UserType;
+use App\Size;
 
-class UserTypesController extends Controller
+class SizeController extends Controller
 {
 
     /**
@@ -27,8 +27,8 @@ class UserTypesController extends Controller
      */
     public function index()
     {
-        $types = UserType::where('state', true)->get();
-        return view('user_types.index', ['types' => $types, 'tab' => 'userType', 'option' => 'indexUserType']);
+        $sizes = Size::where('state', true)->get();
+        return view('sizes.index', ['sizes'=>$sizes, 'tab'=>'size', 'option'=>'indexSize']);
     }
 
     /**
@@ -38,7 +38,7 @@ class UserTypesController extends Controller
      */
     public function create()
     {
-        return view('user_types.create', ['tab' => 'userType', 'option' => 'createUserType']);
+        return view('sizes.create', ['tab'=>'size', 'option'=>'createSize']);
     }
 
     /**
@@ -50,21 +50,22 @@ class UserTypesController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'description' => 'required|unique:user_types',
+            'size' => 'required|unique:sizes',
         ],[
-            'description.required' => 'El campo no puede estar vacío.'
+            'size.required' => 'El campo no puede estar vacío.',
+            'size.unique' => 'Esta talla ya se encuentra registrada.'
         ]);
 
         if($validator->fails()){
-            return redirect()->route('create_user_type')->withErrors($validator);
+            return redirect()->route('create_size')->withErrors($validator);
         }
 
-        $type = new UserType();
-        $type->description = $request->description;
-        $type->state = true;
-        $type->save();
+        $size = new Size();
+        $size->size = $request->size;
+        $size->state = true;
+        $size->save();
 
-        return redirect()->route('index_user_types')->withErrors('Tipo de usuario creado correctamente.');
+        return redirect()->route('index_sizes')->withErrors('Talla registrada correctamente.');
     }
 
     /**
@@ -86,8 +87,8 @@ class UserTypesController extends Controller
      */
     public function edit($id)
     {
-        $type = UserType::FindOrFail($id);
-        return view('user_types.edit', ['type' => $type]);
+        $size = Size::FindOrFail($id);
+        return view('sizes.edit', ['size'=>$size]);
     }
 
     /**
@@ -99,11 +100,11 @@ class UserTypesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $type = UserType::FindOrFail($id);
-        $type->description = $request->get('description');
-        $type->save();
+        $size = Size::FindOrFail($id);
+        $size->size = $request->get('size');
+        $size->save();
 
-        return redirect()->route('index_user_types')->withErrors('Tipo de usuario actualizado.');
+        return redirect()->route('index_sizes')->withErrors('Talla actualizada.');
     }
 
     /**
@@ -112,13 +113,8 @@ class UserTypesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        $id = $request->get('id');
-        $type = UserType::FindOrFail($id);
-        $type->state = false;
-        $type->save();
-
-        return redirect()->route('index_user_types')->withErrors('Tipo de usuario eliminado.');
+        //
     }
 }

@@ -73,12 +73,12 @@
     float: right;
     padding-right: 0 !important;
 }
-.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuUserTypes{
+.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuSizes, #menuUserTypes{
     list-style: none;
     display: none;
     text-align: left;
 }
-.menu-lat .lat-body ul li{
+.menu-lat .lat-body ul .options{
     margin-left: 1.5vw;
     padding-bottom: 5px;
     border-bottom: 1px solid #CCC;   
@@ -115,6 +115,19 @@
     padding: 3vh 3vw;
 }
 
-#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideProviders{
+#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideSizes, #hideProviders{
     display: none;
+}
+.tab-active{
+    color: #0277bd !important;
+    width: 100%;
+    text-align: left;
+    padding: 10px 1vw;
+    border-bottom: 1px solid #0277bd;
+    font-weight: bold;
+}
+.opt-active{
+    margin-left: 1.5vw;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #0277bd;  
 }

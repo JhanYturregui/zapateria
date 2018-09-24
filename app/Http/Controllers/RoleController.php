@@ -29,7 +29,7 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::where('state', true)->get();
-        return view('roles.index', ['roles' => $roles]);
+        return view('roles.index', ['roles' => $roles, 'tab' => 'role', 'option' => 'indexRole']);
     }
 
     /**
@@ -39,7 +39,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('roles.create');
+        return view('roles.create', ['tab' => 'role', 'option' => 'createRole']);
     }
 
     /**

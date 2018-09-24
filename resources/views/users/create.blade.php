@@ -6,6 +6,8 @@
 
 @section('menu-content')
     <div class="create-users">
+        <input type="hidden" id="currentTab" value="{{ $tab }}">
+        <input type="hidden" id="optionTab" value="{{ $option }}">
         <div class="card text-center">
             <div class="card-header card-primary">
                 <h3>Crear Usuario</h3>

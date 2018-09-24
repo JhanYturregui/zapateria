@@ -16,6 +16,7 @@ return array(
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\PersonController' => $baseDir . '/app/Http/Controllers/PersonController.php',
     'App\\Http\\Controllers\\RoleController' => $baseDir . '/app/Http/Controllers/RoleController.php',
+    'App\\Http\\Controllers\\SizeController' => $baseDir . '/app/Http/Controllers/SizeController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\UserTypesController' => $baseDir . '/app/Http/Controllers/UserTypesController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

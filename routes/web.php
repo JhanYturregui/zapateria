@@ -102,3 +102,25 @@ Route::get('personas/{dni}/ver', [
     'uses' => 'PersonController@show',
     'as' => 'show_person'
 ]);
+
+// Sizes Routes
+Route::get('tallas', [
+    'uses' => 'SizeController@index',
+    'as' => 'index_sizes'
+]);
+Route::get('tallas/crear', [
+    'uses' => 'SizeController@create',
+    'as' => 'create_size'
+]);
+Route::post('tallas/crear', [
+    'uses' => 'SizeController@store',
+    'as' => 'create_size'
+]);
+Route::get('tallas/{id}/editar', [
+    'uses' => 'SizeController@edit',
+    'as' => 'edit_size'
+]);
+Route::patch('tallas/{id}/actualizar', [
+    'uses' => 'SizeController@update',
+    'as' => 'update_size'
+]);

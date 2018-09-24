@@ -29,7 +29,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::where('state', true)->get();
-        return view('users.index', ['users' => $users]);    
+        return view('users.index', ['users' => $users, 'tab' => 'user', 'option' => 'indexUser']);    
     }
 
     /**
@@ -40,7 +40,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::where('state', true)->get();
-        return view('users.create', ['roles' => $roles]);
+        return view('users.create', ['roles' => $roles, 'tab' => 'user', 'option' => 'createUser']);
     }
 
     /**

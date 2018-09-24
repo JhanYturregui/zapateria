@@ -4,18 +4,21 @@ var showRoles = $('#showRoles')
 var showProviders = $('#showProviders')
 var showUserTypes = $('#showUserTypes')
 var showPeople = $('#showPeople')
+var showSizes = $('#showSizes')
 
 var hideUsers = $('#hideUsers')
 var hideRoles = $('#hideRoles')
 var hideProviders = $('#hideProviders')
 var hideUserTypes = $('#hideUserTypes')
 var hidePeople = $('#hidePeople')
+var hideSizes = $('#hideSizes')
 
 var menuUsers = $('#menuUsers')
 var menuRoles = $('#menuRoles')
 var menuProviders = $('#menuProviders')
 var menuUserTypes = $('#menuUserTypes')
 var menuPeople = $('#menuPeople')
+var menuSizes = $('#menuSizes')
 
 showUsers.click(function(){
     menuUsers.css('display', 'inline')
@@ -80,4 +83,17 @@ hidePeople.click(function(){
     menuPeople.css('display', 'none')
     showPeople.css('display', 'inline')
     hidePeople.css('display', 'none')
+})
+
+showSizes.click(function(){
+    menuSizes.css('display', 'inline')
+    //menuRoles.css('display', 'none')
+    //menuProviders.css('display', 'none')
+    showSizes.css('display', 'none')
+    hideSizes.css('display', 'inline')
+})
+hideSizes.click(function(){
+    menuSizes.css('display', 'none')
+    showSizes.css('display', 'inline')
+    hideSizes.css('display', 'none')
 })

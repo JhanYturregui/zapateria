@@ -124,3 +124,33 @@ Route::patch('tallas/{id}/actualizar', [
     'uses' => 'SizeController@update',
     'as' => 'update_size'
 ]);
+Route::post('tallas/eliminar', [
+    'uses' => 'SizeController@destroy',
+    'as' => 'remove_size'
+]);
+
+// Brand Routes
+Route::get('marcas', [
+    'uses' => 'BrandController@index',
+    'as' => 'index_brands'
+]);
+Route::get('marcas/crear', [
+    'uses' => 'BrandController@create',
+    'as' => 'create_brand'
+]);
+Route::post('marcas/crear', [
+    'uses' => 'BrandController@store',
+    'as' => 'create_brand'
+]);
+Route::get('marcas/{id}/editar', [
+    'uses' => 'BrandController@edit',
+    'as' => 'edit_brand'
+]);
+Route::patch('marcas/{id}/actualizar', [
+    'uses' => 'BrandController@update',
+    'as' => 'update_brand'
+]);
+Route::post('marcas/eliminar', [
+    'uses' => 'BrandController@destroy',
+    'as' => 'remove_brand'
+]);

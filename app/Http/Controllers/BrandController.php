@@ -5,21 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\Size;
+use App\Brand;
 
-class SizeController extends Controller
+class BrandController extends Controller
 {
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -27,8 +16,8 @@ class SizeController extends Controller
      */
     public function index()
     {
-        $sizes = Size::where('state', true)->get();
-        return view('sizes.index', ['sizes'=>$sizes, 'tab'=>'size', 'option'=>'indexSize']);
+        $brands = Brand::where('state', true)->get();
+        return view ('brands.index', ['brands'=>$brands, 'tab'=>'brand', 'option'=>'indexBrand']);
     }
 
     /**
@@ -38,7 +27,7 @@ class SizeController extends Controller
      */
     public function create()
     {
-        return view('sizes.create', ['tab'=>'size', 'option'=>'createSize']);
+        return view('brands.create', ['tab'=>'brand', 'option'=>'createBrand']);
     }
 
     /**
@@ -50,22 +39,22 @@ class SizeController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'size' => 'required|unique:sizes',
+            'name' => 'required|unique:brands',
         ],[
-            'size.required' => 'El campo no puede estar vacío.',
-            'size.unique' => 'Esta talla ya se encuentra registrada.'
+            'name.required' => 'El campo no puede estar vacío.',
+            'name.unique' => 'Esta marca ya se encuentra registrada.'
         ]);
 
         if($validator->fails()){
-            return redirect()->route('create_size')->withErrors($validator);
+            return redirect()->route('create_brand')->withErrors($validator);
         }
 
-        $size = new Size();
-        $size->size = $request->size;
-        $size->state = true;
-        $size->save();
+        $brand = new Brand();
+        $brand->name = $request->name;
+        $brand->state = true;
+        $brand->save();
 
-        return redirect()->route('index_sizes')->withErrors('Talla registrada correctamente.');
+        return redirect()->route('index_brands')->withErrors('Marca registrada correctamente.');
     }
 
     /**
@@ -87,8 +76,8 @@ class SizeController extends Controller
      */
     public function edit($id)
     {
-        $size = Size::FindOrFail($id);
-        return view('sizes.edit', ['size'=>$size]);
+        $brand = Brand::FindOrFail($id);
+        return view('brands.edit', ['brand'=>$brand]);
     }
 
     /**
@@ -100,11 +89,11 @@ class SizeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $size = Size::FindOrFail($id);
-        $size->size = $request->get('size');
-        $size->save();
+        $brand = Brand::FindOrFail($id);
+        $brand->name = $request->get('name');
+        $brand->save();
 
-        return redirect()->route('index_sizes')->withErrors('Talla actualizada.');
+        return redirect()->route('index_brands')->withErrors('Marca actualizada.');
     }
 
     /**
@@ -116,10 +105,10 @@ class SizeController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->get('id');
-        $size = Size::FindOrFail($id);
-        $size->state = false;
-        $size->save();
+        $brand = Brand::FindOrFail($id);
+        $brand->state = false;
+        $brand->save();
 
-        return redirect()->route('index_sizes')->withErrors('Talla eliminada.');
+        return redirect()->route('index_brands')->withErrors('Marca eliminada.');
     }
 }

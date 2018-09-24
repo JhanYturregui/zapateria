@@ -54,10 +54,10 @@
         <!-- Roles -->
         <div class="tabs" id="tabRoles">
             <a href="#" id="showRoles">
-                <i class="fas fa-key"></i>Roles<i class="fas fa-sort-down"></i>
+                <i class="fas fa-registered"></i>Roles<i class="fas fa-sort-down"></i>
             </a>
             <a href="#" id="hideRoles">
-                <i class="fas fa-key"></i>Roles<i class="fas fa-sort-up"></i>
+                <i class="fas fa-registered"></i>Roles<i class="fas fa-sort-up"></i>
             </a>
         </div>
         <ul id="menuRoles">
@@ -77,6 +77,20 @@
         <ul id="menuSizes">
             <li class="options" id="indexSize"><a href="{{ route('index_sizes') }}"><i class="fas fa-list-ol"></i>Lista</a></li>
             <li class="options" id="createSize"><a href="{{ route('create_size') }}"><i class="fas fa-plus-circle"></i>Crear</a></li>
+        </ul>
+
+        <!-- Marcas -->
+        <div class="tabs" id="tabBrands">
+            <a href="#" id="showBrands">
+                <i class="fab fa-bandcamp"></i>Marcas<i class="fas fa-sort-down"></i>
+            </a>
+            <a href="#" id="hideBrands">
+                <i class="fab fa-bandcamp"></i>Marcas<i class="fas fa-sort-up"></i>
+            </a>
+        </div>
+        <ul id="menuBrands">
+            <li class="options" id="indexBrand"><a href="{{ route('index_brands') }}"><i class="fas fa-list-ol"></i>Lista</a></li>
+            <li class="options" id="createBrand"><a href="{{ route('create_brand') }}"><i class="fas fa-plus-circle"></i>Crear</a></li>
         </ul>
 
         <!-- Proveedores -->

@@ -73,7 +73,7 @@
     float: right;
     padding-right: 0 !important;
 }
-.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuSizes, #menuUserTypes{
+.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuSizes, #menuBrands, #menuUserTypes{
     list-style: none;
     display: none;
     text-align: left;
@@ -115,7 +115,7 @@
     padding: 3vh 3vw;
 }
 
-#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideSizes, #hideProviders{
+#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideSizes, #hideBrands, #hideProviders{
     display: none;
 }
 .tab-active{

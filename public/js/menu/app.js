@@ -75,6 +75,14 @@ window.onload = function(){
             $('#hideSizes').css('display', 'inline')
             $('#tabUserSizes').removeClass('tabs')
             $('#tabUserSizes').addClass('tab-active')
+            break
+
+        case 'brand':
+            $('#menuBrands').css('display', 'inline')
+            $('#showBrands').css('display', 'none')
+            $('#hideBrands').css('display', 'inline')
+            $('#tabBrands').removeClass('tabs')
+            $('#tabBrands').addClass('tab-active')
             break    
     
         default:
@@ -130,6 +138,16 @@ window.onload = function(){
         case 'createSize':
             $('#createSize').removeClass('options')
             $('#createSize').addClass('opt-active')
+            break
+
+        case 'indexBrand':
+            $('#indexBrand').removeClass('options')
+            $('#indexBrand').addClass('opt-active')
+            break
+
+        case 'createBrand':
+            $('#createBrand').removeClass('options')
+            $('#createBrand').addClass('opt-active')
             break    
 
         default:

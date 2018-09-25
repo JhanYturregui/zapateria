@@ -39,7 +39,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        $roles = Role::where('state', true)->get();
+        $roles = Role::get();
         return view('person.create', ['roles' => $roles, 'tab' => 'person', 'option' => 'createPerson']);
     }
 
@@ -70,7 +70,7 @@ class PersonController extends Controller
 
         $validator = Validator::make($request->all(), [
             'document_type' => 'required',
-            'document_number' => 'required|max:11|min:8|unique:person',
+            'document_number' => 'required|max:11|min:8|unique:people',
         ],[
             'document_type.required' => 'Debe seleccionar un tipo de documento.',
             'document_number.required' => 'El número de documento es obligatorio.',
@@ -99,7 +99,7 @@ class PersonController extends Controller
         $person->state = true;
         $person->save();
 
-        return redirect()->route('index_person')->withErrors('Ok');
+        return redirect()->route('index_person')->withErrors('Persona creada correctamente.');
 
     }
 
@@ -111,7 +111,7 @@ class PersonController extends Controller
      */
     public function show($dni)
     {
-        $person = Person::where([['state', true],['document_number', $dni]])->first()->toJson();
+        $person = Person::where('document_number', $dni)->first()->toJson();
         print_r($person);
     }
 

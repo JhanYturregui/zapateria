@@ -5,6 +5,9 @@
 @endsection
 
 @section('menu-content')
+
+    @include('partials.success')
+
     <div class="brands">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">
@@ -39,8 +42,7 @@
                             </tr>
                         @endforeach
                     </tbody>
-                </table>
-                
+                </table>        
             </div>
         </div>
     </div>
@@ -56,7 +58,7 @@
               </button>
             </div>
             <div class="modal-body">
-              ¿Está seguro que desea eliminar este marca?
+              ¿Está seguro que desea eliminar esta marca?
             </div>
             <div class="modal-footer">
                 <form>

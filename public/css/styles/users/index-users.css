@@ -12,3 +12,9 @@ thead{
 .fa-trash{
     color: #e53935;
 }
+.alerts{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 3vh;
+}

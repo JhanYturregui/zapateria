@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddStateToBrands extends Migration
+class CreateModelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddStateToBrands extends Migration
      */
     public function up()
     {
-        Schema::table('brands', function(Blueprint $table){
-            $table->boolean('state')->after('name');
+        Schema::create('models', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddStateToBrands extends Migration
      */
     public function down()
     {
-        Schema::table('state', function(Blueprint $table){
-            $table->dropColumn('state');
-        });
+        Schema::dropIfExists('models');
     }
 }

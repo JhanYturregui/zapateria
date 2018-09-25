@@ -7,6 +7,9 @@ function removeRole(id){
             data:{
                 id: id,
                 _token: $('input[name=_token]').val(), 
+            },
+            success: function(a){
+                location.reload()
             }
         })
     })

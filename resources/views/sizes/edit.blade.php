@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-size">
         <div class="card text-center">
             <div class="card-header card-primary">
@@ -15,7 +16,7 @@
                     {{ csrf_field() }}
                     <input type="hidden" name="_method" value="patch">
                     <div class="form-group row">
-                      <label for="size" class="col-sm-3 col-form-label">Número</label>
+                      <label for="size" class="col-sm-3 col-form-label">Número:</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" name="size" value="{{$size->size}}">
                       </div>
@@ -30,6 +31,8 @@
                 </form>
             </div>
         </div>
-
     </div>
+
+    @include('partials.errors')
+
 @endsection

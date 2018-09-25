@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-person">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">
@@ -78,8 +79,8 @@
                 </form>
             </div>
         </div>
-
-        @include('partials.errors')
-
     </div>
+
+    @include('partials.errors')
+
 @endsection

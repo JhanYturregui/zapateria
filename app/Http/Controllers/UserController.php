@@ -52,11 +52,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'doc_num' => 'required',
             'username' => 'required|unique:users',
             'type' => 'required',
         ],[
-            'name.required' => 'El campo no puede estar vacío.',
+            'doc_num.required' => 'El campo no puede estar vacío.',
             'username.required' => 'El campo no puede estar vacío.',
             'username.unique' => 'El nombre de usuario no está disponible.',
         ]);
@@ -64,6 +64,8 @@ class UserController extends Controller
         if($validator->fails()){
             return redirect()->route('create_user')->withErrors($validator);
         }
+
+        // type
 
         $user = new User();
         $user->name = $request->name;

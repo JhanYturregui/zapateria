@@ -1,0 +1,21 @@
+.lines{
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: 5vh;
+}
+thead{
+    color: #607d8b;
+}
+.fa-pen{
+    color: #43a047;
+}
+.fa-trash{
+    color: #e53935;
+}
+.alerts{
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: 3vh;
+}

@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-size">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">
@@ -16,7 +17,7 @@
                 <form method="POST" action="{{ route('create_size') }}">
                     {{ csrf_field() }}
                     <div class="form-group row">
-                      <label for="size" class="col-sm-3 col-form-label">Número</label>
+                      <label for="size" class="col-sm-3 col-form-label">Número:</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" name="size" id="size">
                       </div>
@@ -31,4 +32,7 @@
             </div>
         </div>
     </div>
+
+    @include('partials.errors')
+
 @endsection

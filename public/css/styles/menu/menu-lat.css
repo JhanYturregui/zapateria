@@ -12,10 +12,11 @@
     height: 100vh;
     float: left;
     border-right: 1px solid #BDBDBD;
+    font-size: 0.9em;
 }
 .menu-lat .lat-header{
     width: 100%;
-    height: 30vh;
+    height: 25vh;
     background: #0277bd;
     text-align: center;
     padding-top: 5vh;
@@ -48,7 +49,7 @@
     text-shadow: 1px 1px 1px #ccc;
 }
 .menu-lat .lat-body{
-    padding: 5vh 2vw;
+    padding: 2vh 2vw;
     text-align: center;
 }
 .menu-lat .lat-body .tabs{
@@ -73,7 +74,7 @@
     float: right;
     padding-right: 0 !important;
 }
-.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuSizes, #menuBrands, #menuUserTypes{
+.menu-lat .lat-body #menuUsers, #menuRoles, #menuPeople, #menuProviders, #menuSizes, #menuBrands, #menuUserTypes, #menuModels, #menuColors, #menuLines{
     list-style: none;
     display: none;
     text-align: left;
@@ -83,14 +84,14 @@
     padding-bottom: 5px;
     border-bottom: 1px solid #CCC;   
 }
-.menu-lat .lat-body ul li a{
+.menu-lat .lat-body ul .options a{
     color: #546e7a;
 }
-.menu-lat .lat-body ul li a:hover{
+.menu-lat .lat-body ul .options a:hover{
     text-decoration: none;
     color: #0277bd;
 }
-.menu-lat .lat-body ul li a i{
+.menu-lat .lat-body ul li .options i{
     padding-right: 5px;
 }
 .main-content {
@@ -115,9 +116,11 @@
     padding: 3vh 3vw;
 }
 
-#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideSizes, #hideBrands, #hideProviders{
+#hideUsers, #hideUserTypes, #hidePeople, #hideRoles, #hideSizes, #hideBrands, #hideModels, #hideColors, #hideLines, #hideProviders{
     display: none;
 }
+
+/* Clase tab activo */
 .tab-active{
     color: #0277bd !important;
     width: 100%;
@@ -126,8 +129,28 @@
     border-bottom: 1px solid #0277bd;
     font-weight: bold;
 }
+.tab-active a{
+    color: #0277bd;
+    font-family: 'Raleway', sans-serif;
+}
+.tab-active a:hover{
+    text-decoration: none;
+    color: #0277bd;
+}
+.tab-active a i{
+    padding-right: 5px;
+}
+.tab-active a .fa-sort-down, .fa-sort-up{
+    float: right;
+    padding-right: 0 !important;
+}
+
 .opt-active{
     margin-left: 1.5vw;
     padding-bottom: 5px;
     border-bottom: 1px solid #0277bd;  
+}
+.opt-active a:hover{
+    color: #0277bd;
+    text-decoration: none;
 }

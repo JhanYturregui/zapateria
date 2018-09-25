@@ -28,7 +28,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::where('state', true)->get();
+        $roles = Role::get();
         return view('roles.index', ['roles' => $roles, 'tab' => 'role', 'option' => 'indexRole']);
     }
 
@@ -62,10 +62,9 @@ class RoleController extends Controller
 
         $role = new Role();
         $role->description = $request->description;
-        $role->state = true;
         $role->save();
 
-        return redirect()->route('index_roles')->withErrors('Ok');
+        return redirect()->route('index_roles')->withErrors('Rol creado correctamente.');
 
     }
 
@@ -117,10 +116,8 @@ class RoleController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->get('id');
-        $role = Role::FindOrFail($id);
-        $role->state = false;
-        $role->save();
+        Role::destroy($id);
 
-        return redirect()->route('index_roles')->withErrors('Rol eliminado.');
+        //return redirect()->route('index_roles')->withErrors('Rol eliminado.');
     }
 }

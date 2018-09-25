@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-brand">
         <div class="card text-center">
             <div class="card-header card-primary">
@@ -30,6 +31,8 @@
                 </form>
             </div>
         </div>
-
     </div>
+
+    @include('partials.errors')
+
 @endsection

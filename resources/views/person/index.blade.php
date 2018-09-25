@@ -5,6 +5,9 @@
 @endsection
 
 @section('menu-content')
+
+    @include('partials.success')
+
     <div class="people">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">

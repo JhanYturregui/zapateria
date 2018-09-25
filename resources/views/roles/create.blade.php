@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-role">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">
@@ -30,6 +31,8 @@
                 </form>
             </div>
         </div>
-
     </div>
+
+    @include('partials.errors')
+
 @endsection

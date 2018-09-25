@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-user-types">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">
@@ -16,7 +17,7 @@
                 <form method="POST" action="{{ route('create_user_type') }}">
                     {{ csrf_field() }}
                     <div class="form-group row">
-                      <label for="description" class="col-sm-3 col-form-label">Descripción</label>
+                      <label for="description" class="col-sm-3 col-form-label">Descripción:</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" name="description" id="description">
                       </div>
@@ -30,6 +31,8 @@
                 </form>
             </div>
         </div>
-
     </div>
+
+    @include('partials.errors')
+
 @endsection

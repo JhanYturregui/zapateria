@@ -27,7 +27,7 @@ class UserTypesController extends Controller
      */
     public function index()
     {
-        $types = UserType::where('state', true)->get();
+        $types = UserType::get();
         return view('user_types.index', ['types' => $types, 'tab' => 'userType', 'option' => 'indexUserType']);
     }
 
@@ -61,7 +61,6 @@ class UserTypesController extends Controller
 
         $type = new UserType();
         $type->description = $request->description;
-        $type->state = true;
         $type->save();
 
         return redirect()->route('index_user_types')->withErrors('Tipo de usuario creado correctamente.');
@@ -115,9 +114,7 @@ class UserTypesController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->get('id');
-        $type = UserType::FindOrFail($id);
-        $type->state = false;
-        $type->save();
+        UserType::destroy($id);
 
         return redirect()->route('index_user_types')->withErrors('Tipo de usuario eliminado.');
     }

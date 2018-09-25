@@ -150,7 +150,85 @@ Route::patch('marcas/{id}/actualizar', [
     'uses' => 'BrandController@update',
     'as' => 'update_brand'
 ]);
-Route::post('marcas/eliminar', [
+Route::delete('marcas/{id}/eliminar', [
     'uses' => 'BrandController@destroy',
     'as' => 'remove_brand'
+]);
+
+/****** Models Routes ******/
+Route::get('modelos', [
+    'uses' => 'ModelController@index',
+    'as' => 'index_models'
+]);
+Route::get('modelos/crear', [
+    'uses' => 'ModelController@create',
+    'as' => 'create_model'
+]);
+Route::post('modelos/crear', [
+    'uses' => 'ModelController@store',
+    'as' => 'create_model'
+]);
+Route::get('modelos/{id}/editar', [
+    'uses' => 'ModelController@edit',
+    'as' => 'edit_model'
+]);
+Route::patch('modelos/{id}/actualizar', [
+    'uses' => 'ModelController@update',
+    'as' => 'update_model'
+]);
+Route::delete('modelos/{id}/eliminar', [
+    'uses' => 'ModelController@destroy',
+    'as' => 'remove_model'
+]);
+
+/****** Colors Routes ******/
+Route::get('colores', [
+    'uses' => 'ColorController@index',
+    'as' => 'index_colors'
+]);
+Route::get('colores/crear', [
+    'uses' => 'ColorController@create',
+    'as' => 'create_color'
+]);
+Route::post('colores/crear', [
+    'uses' => 'ColorController@store',
+    'as' => 'create_color'
+]);
+Route::get('colores/{id}/editar', [
+    'uses' => 'ColorController@edit',
+    'as' => 'edit_color'
+]);
+Route::patch('colores/{id}/actualizar', [
+    'uses' => 'ColorController@update',
+    'as' => 'update_color'
+]);
+Route::delete('colores/{id}/eliminar', [
+    'uses' => 'ColorController@destroy',
+    'as' => 'remove_color'
+]);
+
+/****** Lines Routes ******/
+Route::get('lineas', [
+    'uses' => 'LineController@index',
+    'as' => 'index_lines'
+]);
+Route::get('lineas/crear', [
+    'uses' => 'LineController@create',
+    'as' => 'create_line'
+]);
+Route::post('lineas/crear', [
+    'uses' => 'LineController@store',
+    'as' => 'create_line'
+]);
+Route::get('lineas/{id}/editar', [
+    'uses' => 'LineController@edit',
+    'as' => 'edit_line'
+]);
+Route::patch('lineas/{id}/actualizar', [
+    'uses' => 'LineController@update',
+    'as' => 'update_line'
+]);
+Route::delete('lineas/{id}/eliminar', [
+    'uses' => 'LineController@destroy',
+    'as' => 'remove_line'
 ]);

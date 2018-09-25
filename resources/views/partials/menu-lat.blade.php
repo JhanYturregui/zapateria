@@ -93,6 +93,48 @@
             <li class="options" id="createBrand"><a href="{{ route('create_brand') }}"><i class="fas fa-plus-circle"></i>Crear</a></li>
         </ul>
 
+        <!-- Modelos -->
+        <div class="tabs" id="tabModels">
+            <a href="#" id="showModels">
+                <i class="fab fa-bandcamp"></i>Modelos<i class="fas fa-sort-down"></i>
+            </a>
+            <a href="#" id="hideModels">
+                <i class="fab fa-bandcamp"></i>Modelos<i class="fas fa-sort-up"></i>
+            </a>
+        </div>
+        <ul id="menuModels">
+            <li class="options" id="indexModel"><a href="{{ route('index_models') }}"><i class="fas fa-list-ol"></i>Lista</a></li>
+            <li class="options" id="createModel"><a href="{{ route('create_model') }}"><i class="fas fa-plus-circle"></i>Crear</a></li>
+        </ul>
+
+        <!-- Colores -->
+        <div class="tabs" id="tabColors">
+            <a href="#" id="showColors">
+                <i class="fab fa-bandcamp"></i>Colores<i class="fas fa-sort-down"></i>
+            </a>
+            <a href="#" id="hideColors">
+                <i class="fab fa-bandcamp"></i>Colores<i class="fas fa-sort-up"></i>
+            </a>
+        </div>
+        <ul id="menuColors">
+            <li class="options" id="indexColor"><a href="{{ route('index_colors') }}"><i class="fas fa-list-ol"></i>Lista</a></li>
+            <li class="options" id="createColor"><a href="{{ route('create_color') }}"><i class="fas fa-plus-circle"></i>Crear</a></li>
+        </ul>
+
+        <!-- Lineas -->
+        <div class="tabs" id="tabLines">
+            <a href="#" id="showLines">
+                <i class="fab fa-bandcamp"></i>Líneas<i class="fas fa-sort-down"></i>
+            </a>
+            <a href="#" id="hideLines">
+                <i class="fab fa-bandcamp"></i>Líneas<i class="fas fa-sort-up"></i>
+            </a>
+        </div>
+        <ul id="menuLines">
+            <li class="options" id="indexLine"><a href="{{ route('index_lines') }}"><i class="fas fa-list-ol"></i>Lista</a></li>
+            <li class="options" id="createLine"><a href="{{ route('create_line') }}"><i class="fas fa-plus-circle"></i>Crear</a></li>
+        </ul>
+
         <!-- Proveedores -->
         <!--<div class="tabs">
             <a href="#" id="showProviders">

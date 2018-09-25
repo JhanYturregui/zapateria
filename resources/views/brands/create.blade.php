@@ -5,6 +5,7 @@
 @endsection
 
 @section('menu-content')
+
     <div class="create-brand">
         <input type="hidden" id="currentTab" value="{{ $tab }}">
         <input type="hidden" id="optionTab" value="{{ $option }}">
@@ -16,7 +17,7 @@
                 <form method="POST" action="{{ route('create_brand') }}">
                     {{ csrf_field() }}
                     <div class="form-group row">
-                      <label for="name" class="col-sm-3 col-form-label">Nombre</label>
+                      <label for="name" class="col-sm-3 col-form-label">Nombre:</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" name="name" id="name">
                       </div>
@@ -31,4 +32,7 @@
             </div>
         </div>
     </div>
+
+    @include('partials.errors')    
+    
 @endsection

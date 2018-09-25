@@ -83,6 +83,30 @@ window.onload = function(){
             $('#hideBrands').css('display', 'inline')
             $('#tabBrands').removeClass('tabs')
             $('#tabBrands').addClass('tab-active')
+            break
+
+        case 'model':
+            $('#menuModels').css('display', 'inline')
+            $('#showModels').css('display', 'none')
+            $('#hideModels').css('display', 'inline')
+            $('#tabModels').removeClass('tabs')
+            $('#tabModels').addClass('tab-active')
+            break    
+
+        case 'color':
+            $('#menuColors').css('display', 'inline')
+            $('#showColors').css('display', 'none')
+            $('#hideColors').css('display', 'inline')
+            $('#tabColors').removeClass('tabs')
+            $('#tabColors').addClass('tab-active')
+            break
+
+        case 'line':
+            $('#menuLines').css('display', 'inline')
+            $('#showLines').css('display', 'none')
+            $('#hideLines').css('display', 'inline')
+            $('#tabLines').removeClass('tabs')
+            $('#tabLines').addClass('tab-active')
             break    
     
         default:
@@ -148,23 +172,40 @@ window.onload = function(){
         case 'createBrand':
             $('#createBrand').removeClass('options')
             $('#createBrand').addClass('opt-active')
+            break
+
+        case 'indexModel':
+            $('#indexModel').removeClass('options')
+            $('#indexModel').addClass('opt-active')
+            break
+
+        case 'createModel':
+            $('#createModel').removeClass('options')
+            $('#createModel').addClass('opt-active')
+            break
+
+        case 'indexColor':
+            $('#indexColor').removeClass('options')
+            $('#indexColor').addClass('opt-active')
+            break
+
+        case 'createColor':
+            $('#createColor').removeClass('options')
+            $('#createColor').addClass('opt-active')
+            break
+
+        case 'indexLine':
+            $('#indexLine').removeClass('options')
+            $('#indexLine').addClass('opt-active')
+            break
+
+        case 'createLine':
+            $('#createLine').removeClass('options')
+            $('#createLine').addClass('opt-active')
             break    
 
         default:
             break
     }
-
-    /*if(tabPerson == "person"){
-        $('#menuPeople').css('display', 'inline')
-        $('#showPeople').css('display', 'none')
-        $('#hidePeople').css('display', 'inline')
-        $('#tabPeople').removeClass('tabs')
-        $('#tabPeople').addClass('tab-active')
-    }
-
-    if(optionPerson == "index"){
-        $('#indexPerson').removeClass('options')
-        $('#indexPerson').addClass('opt-active')
-    }*/
 
 }

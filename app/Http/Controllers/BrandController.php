@@ -16,7 +16,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = Brand::where('state', true)->get();
+        $brands = Brand::get();
         return view ('brands.index', ['brands'=>$brands, 'tab'=>'brand', 'option'=>'indexBrand']);
     }
 
@@ -51,10 +51,9 @@ class BrandController extends Controller
 
         $brand = new Brand();
         $brand->name = $request->name;
-        $brand->state = true;
         $brand->save();
 
-        return redirect()->route('index_brands')->withErrors('Marca registrada correctamente.');
+        return redirect()->route('index_brands')->withErrors(['Marca registrada correctamente.']);
     }
 
     /**
@@ -105,10 +104,8 @@ class BrandController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->get('id');
-        $brand = Brand::FindOrFail($id);
-        $brand->state = false;
-        $brand->save();
+        Brand::destroy($id);
 
-        return redirect()->route('index_brands')->withErrors('Marca eliminada.');
+        //return redirect()->route('index_brands')->withErrors('Marca eliminada.');
     }
 }

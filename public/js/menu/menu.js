@@ -6,6 +6,9 @@ var showUserTypes = $('#showUserTypes')
 var showPeople = $('#showPeople')
 var showSizes = $('#showSizes')
 var showBrands = $('#showBrands')
+var showModels = $('#showModels')
+var showColors = $('#showColors')
+var showLines = $('#showLines')
 
 var hideUsers = $('#hideUsers')
 var hideRoles = $('#hideRoles')
@@ -14,6 +17,9 @@ var hideUserTypes = $('#hideUserTypes')
 var hidePeople = $('#hidePeople')
 var hideSizes = $('#hideSizes')
 var hideBrands = $('#hideBrands')
+var hideModels = $('#hideModels')
+var hideColors = $('#hideColors')
+var hideLines = $('#hideLines')
 
 var menuUsers = $('#menuUsers')
 var menuRoles = $('#menuRoles')
@@ -22,9 +28,21 @@ var menuUserTypes = $('#menuUserTypes')
 var menuPeople = $('#menuPeople')
 var menuSizes = $('#menuSizes')
 var menuBrands = $('#menuBrands')
+var menuModels = $('#menuModels')
+var menuColors = $('#menuColors')
+var menuLines = $('#menuLines')
 
+// Show menu users
 showUsers.click(function(){
     menuUsers.css('display', 'inline')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
     showUsers.css('display', 'none')
     hideUsers.css('display', 'inline')
 })
@@ -34,8 +52,17 @@ hideUsers.click(function(){
     hideUsers.css('display', 'none')
 })
 
+// Show menu roles
 showRoles.click(function(){
+    menuUsers.css('display', 'none')
     menuRoles.css('display', 'inline')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
     showRoles.css('display', 'none')
     hideRoles.css('display', 'inline')
 })
@@ -45,8 +72,17 @@ hideRoles.click(function(){
     hideRoles.css('display', 'none')
 })
 
+// Show menu user types
 showUserTypes.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
     menuUserTypes.css('display', 'inline')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
     showUserTypes.css('display', 'none')
     hideUserTypes.css('display', 'inline')
 })
@@ -56,7 +92,8 @@ hideUserTypes.click(function(){
     hideUserTypes.css('display', 'none')
 })
 
-showProviders.click(function(){
+// Show menu providers
+/*showProviders.click(function(){
     menuProviders.css('display', 'inline')
     showProviders.css('display', 'none')
     hideProviders.css('display', 'inline')
@@ -65,10 +102,19 @@ hideProviders.click(function(){
     menuProviders.css('display', 'none')
     showProviders.css('display', 'inline')
     hideProviders.css('display', 'none')
-})
+})*/
 
+// Show menu people
 showPeople.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
     menuPeople.css('display', 'inline')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
     showPeople.css('display', 'none')
     hidePeople.css('display', 'inline')
 })
@@ -78,8 +124,17 @@ hidePeople.click(function(){
     hidePeople.css('display', 'none')
 })
 
+// Show menu sizes
 showSizes.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
     menuSizes.css('display', 'inline')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
     showSizes.css('display', 'none')
     hideSizes.css('display', 'inline')
 })
@@ -89,8 +144,17 @@ hideSizes.click(function(){
     hideSizes.css('display', 'none')
 })
 
+// Show menu brands
 showBrands.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
     menuBrands.css('display', 'inline')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
     showBrands.css('display', 'none')
     hideBrands.css('display', 'inline')
 })
@@ -98,4 +162,64 @@ hideBrands.click(function(){
     menuBrands.css('display', 'none')
     showBrands.css('display', 'inline')
     hideBrands.css('display', 'none')
+})
+
+// Show menu models
+showModels.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'inline')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'none')
+    showModels.css('display', 'none')
+    hideModels.css('display', 'inline')
+})
+hideModels.click(function(){
+    menuModels.css('display', 'none')
+    showModels.css('display', 'inline')
+    hideModels.css('display', 'none')
+})
+
+// Show menu colors
+showColors.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'inline')
+    menuLines.css('display', 'none')
+    showColors.css('display', 'none')
+    hideColors.css('display', 'inline')
+})
+hideColors.click(function(){
+    menuColors.css('display', 'none')
+    showColors.css('display', 'inline')
+    hideColors.css('display', 'none')
+})
+
+// Show menu lines
+showLines.click(function(){
+    menuUsers.css('display', 'none')
+    menuRoles.css('display', 'none')
+    menuUserTypes.css('display', 'none')
+    menuPeople.css('display', 'none')
+    menuSizes.css('display', 'none')
+    menuBrands.css('display', 'none')
+    menuModels.css('display', 'none')
+    menuColors.css('display', 'none')
+    menuLines.css('display', 'inline')
+    showLines.css('display', 'none')
+    hideLines.css('display', 'inline')
+})
+hideLines.click(function(){
+    menuLines.css('display', 'none')
+    showLines.css('display', 'inline')
+    hideLines.css('display', 'none')
 })

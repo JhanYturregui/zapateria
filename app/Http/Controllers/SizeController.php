@@ -27,7 +27,7 @@ class SizeController extends Controller
      */
     public function index()
     {
-        $sizes = Size::where('state', true)->get();
+        $sizes = Size::get();
         return view('sizes.index', ['sizes'=>$sizes, 'tab'=>'size', 'option'=>'indexSize']);
     }
 
@@ -61,8 +61,7 @@ class SizeController extends Controller
         }
 
         $size = new Size();
-        $size->size = $request->size;
-        $size->state = true;
+        $size->number = $request->size;
         $size->save();
 
         return redirect()->route('index_sizes')->withErrors('Talla registrada correctamente.');
@@ -101,7 +100,7 @@ class SizeController extends Controller
     public function update(Request $request, $id)
     {
         $size = Size::FindOrFail($id);
-        $size->size = $request->get('size');
+        $size->number = $request->get('size');
         $size->save();
 
         return redirect()->route('index_sizes')->withErrors('Talla actualizada.');
@@ -116,10 +115,8 @@ class SizeController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->get('id');
-        $size = Size::FindOrFail($id);
-        $size->state = false;
-        $size->save();
+        Size::destroy($id);
 
-        return redirect()->route('index_sizes')->withErrors('Talla eliminada.');
+        //return redirect()->route('index_sizes')->withErrors('Talla eliminada.');
     }
 }
